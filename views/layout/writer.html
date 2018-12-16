@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/dist/main.css?<%=locals._version%>">
+    <!-- <link rel='stylesheet' href='/css/reset.css' type='text/css' media='all' /> -->
+    <!-- <link rel='stylesheet' href='/css/monokai_sublime.min.css' type='text/css' media='all' /> -->
+    <!-- <link rel='stylesheet' href='/css/me.css' type='text/css' media='all' /> -->
+</head>
+
+<body>
+    <div class="body writer-body">
+        <router-view></router-view>
+    </div>
+    <script src="/js/vue.min.js"></script>
+    <script src="/js/vue-router.min.js"></script>
+    <script src="/js/highlight.min.js"></script>
+    <script src="/js/marked.min.js"></script>
+    <!--<script type="module" src="/js/me.js"></script>-->
+    <script src="/dist/frontend.js?<%=locals._version%>"></script>
+</body>
+
+</html>

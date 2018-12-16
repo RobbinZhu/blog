@@ -1,0 +1,358 @@
+.editor-markdown {
+    overflow: hidden;
+    background: #F7F7F7;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.editor-markdown .editor-markdown-header {
+    height: 106px;
+}
+
+.editor-markdown-body {
+    flex: 1;
+    padding: 20px 50px;
+    overflow: hidden;
+}
+
+.editor-markdown pre {
+    background: #23241f
+}
+
+.editor-markdown-util {
+    overflow: hidden;
+    background: #d9d9d9;
+    position: relative;
+}
+
+.editor-markdown-util li {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    float: left;
+}
+
+.editor-markdown-util button {
+    border: none;
+    cursor: pointer;
+    padding: 0 10px;
+    color: #595959;
+    background: #d9d9d9;
+    font-size: 16px;
+    line-height: 46px;
+    float: left;
+    transition: all 300ms ease;
+}
+
+.editor-markdown-util button:hover {
+    background: #595959;
+    color: #d9d9d9;
+}
+
+.editor-markdown .editor-markdown-input,
+.editor-markdown .editor-markdown-preview {
+    width: 50%;
+    float: left;
+    height: 100%;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+.editor-markdown .editor-markdown-input textarea {
+    width: 100%;
+    float: left;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.editor-markdown .editor-markdown-preview {
+    box-sizing: border-box;
+    padding: 10px;
+    background: #fcfaf2;
+    overflow-y: auto;
+    font-size: 16px;
+}
+
+.editor-markdown.simple .editor-markdown-input,
+.editor-markdown.simple .editor-markdown-preview {
+    width: 100%;
+    box-shadow: 0 0 20px #ddd;
+}
+
+.editor-markdown .editor-markdown-title {
+    position: relative;
+}
+
+.editor-markdown-title input {
+    display: block;
+    width: 100%;
+    line-height: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.editor-markdown.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.editor-markdown .editor-markdown-input,
+.editor-markdown .editor-markdown-input textarea {
+    border-radius: 5px;
+}
+
+.editor-markdown.fixed .editor-markdown-input,
+.editor-markdown.fixed .editor-markdown-preview {
+    height: 100%;
+}
+
+.modal-mask {
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    outline: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 300ms ease;
+}
+
+.modal-mask.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    min-height: 300px;
+    margin-left: -200px;
+    margin-top: -150px;
+    background: #FFF;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+    transform: translate(0, -300px);
+    transition: all 300ms ease;
+    color: #555;
+}
+
+.modal-input {
+    font-size: 16px;
+    /* float: left; */
+    width: 90%;
+    line-height: 40px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 20px;
+    border: 1px solid #CCC;
+}
+
+.modal-mask.show .modal-content {
+    transform: translate(0, 0);
+}
+
+.modal-content .modal-title {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.modal-content label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 90px;
+    text-align: center;
+    background: #eee;
+}
+
+.modal-content .modal-input-text {
+    float: left;
+    width: 100%;
+    background: #FFF;
+    height: 40px;
+    padding-left: 100px;
+    padding-right: 10px;
+    display: block;
+    box-sizing: border-box;
+}
+
+.modal-content .modal-input-img {
+    display: block;
+    width: 100%;
+}
+
+.modal-content .modal-operation {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.modal-content .modal-operation button {
+    margin: 0 20px;
+    line-height: 35px;
+    padding: 0 20px;
+    font-size: 16px;
+}
+
+.writer-body {
+    max-width: 100%;
+    height: 100%;
+}
+
+.layout {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.layout-left {
+    height: 100%;
+    /* overflow-y: auto; */
+    color: #f2f2f2;
+    z-index: 100;
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 20%;
+    float: left;
+}
+
+.layout-right {
+    height: 100%;
+}
+
+.my-topic-list {
+    height: 100%;
+    background-color: #404040;
+    font-size: 16px;
+    line-height: 46px;
+}
+
+.my-topic-list li {
+    cursor: pointer;
+    border-left: 5px solid transparent;
+    position: relative;
+    height: 46px;
+    margin-bottom: 5px;
+}
+
+.my-topic-list li input {
+    display: block;
+    line-height: 46px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 52px 0 12px;
+    background: transparent;
+    color: #f2f2f2;
+    cursor: pointer;
+}
+
+.my-topic-list li span {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 46px;
+    padding: 0 10px;
+    background: #aaa;
+}
+
+.my-topic-list li:hover span {
+    display: block;
+}
+
+.my-topic-list li:hover input {
+    background: #666;
+}
+
+.my-topic-list li.active,
+.my-topic-list li:hover {
+    background-color: #666;
+    border-left: 5px solid #ec7259;
+    line-height: 46px;
+    color: #FFF;
+}
+
+.my-article-list {
+    height: 100%;
+    background-color: #dfdfdf;
+    color: #555;
+    font-size: 16px;
+    line-height: 46px;
+}
+
+.my-article-list li {
+    cursor: pointer;
+    position: relative;
+    border-left: 5px solid transparent;
+    margin-bottom: 5px;
+    height: 46px;
+    line-height: 46px;
+}
+
+.my-article-list li.published {
+    border-left-color: #42b983 !important;
+}
+
+.my-article-list li input {
+    display: block;
+    line-height: 46px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 52px 0 12px;
+    background: transparent;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.my-article-list li div {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 46px;
+    padding: 0 10px;
+    background: #aaa;
+}
+
+.my-article-list li span {
+    line-height: 46px;
+    padding: 0 10px;
+    background: #aaa;
+}
+
+.my-article-list li:hover div {
+    display: block;
+}
+
+.my-article-list li.active,
+.my-article-list li:hover {
+    background-color: #bbb;
+    /*border-left: 5px solid #ec7259;*/
+    color: #555;
+}
+
+.my-topic-action,
+.my-article-action {
+    height: 60px;
+}

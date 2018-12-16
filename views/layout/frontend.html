@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <%* head %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#4c5473" />
+    <meta name="apple-mobile-web-app-title" content=<%=JSON.stringify(locals.site.title|| '')%> />
+    <meta name="apple-touch-fullscreen" content="YES" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#4c5473" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="robots" content="index,follow" />
+    <meta http-equiv="x-rim-auto-match" content="none" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="msapplication-tap-highlight" content="no">
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+    <link rel="stylesheet" href="/dist/main.css?<%=locals._version%>">
+</head>
+
+<body>
+    <section class="header">
+        <nav class="navbar">
+            <a class="btn-home" href="/">首页</a>
+            <a class="btn-writer" nofollow href="/writer" target="_blank">写文章</a>
+        </nav>
+    </section>
+    <section class="body">
+        <%* body %>
+    </section>
+</body>
+
+</html>

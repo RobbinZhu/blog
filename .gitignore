@@ -1,0 +1,4 @@
+.DS_Store
+node_modules
+nohup.out
+config/config_prd.js

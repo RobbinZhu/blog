@@ -1,0 +1,80 @@
+.portal .panel {}
+
+.portal .title {
+    color: #900;
+}
+
+.portal .content {
+    margin: 0;
+}
+
+.portal .header .nav li a {
+    padding: 0 12px;
+}
+
+.portal .header .nav li a.active,
+.portal .header .nav li a:hover {
+    background-color: #900;
+    color: #FFF;
+}
+
+.portal .operation a {
+    margin-right: 5px;
+}
+
+.portal .comment .focus {
+    float: left;
+}
+
+.portal .tag_load .tag {
+    float: left;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 26px;
+    color: #aaa;
+    border: 1px solid #F7F7F7;
+}
+
+.portal .tag_load .tag.selected {
+    color: #008000;
+    background: #FFF;
+    border: 1px solid #EAEAEA;
+}
+
+.portal .edit-panel {}
+
+.portal .edit-content {
+    height: 800px;
+    position: relative;
+}
+
+.portal .edit-content textarea,
+.portal .edit-content .preview {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    font-size: 16px;
+    overflow: scroll;
+}
+
+.portal .edit-content .active {
+    display: block;
+}
+
+.portal .edit-actions {
+    border-bottom: 1px solid #555;
+}
+
+.portal .edit-actions a {
+    line-height: 36px;
+    font-size: 16px;
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.portal .edit-actions a.active {
+    color: #900;
+}

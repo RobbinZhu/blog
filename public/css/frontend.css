@@ -1,0 +1,134 @@
+.header {
+    position: relative;
+    background: #FFF;
+    height: 58px;
+    z-index: 9;
+    border-bottom: 1px solid #e0e4e7;
+    box-shadow: 4px 0 8px rgba(0, 0, 0, .08);
+    font-size: 16px;
+}
+
+.navbar,
+.body {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.header-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 58px;
+    background: #fff;
+    float: left;
+}
+
+.header-menu li {
+    float: left;
+}
+
+.logo {
+    text-align: center;
+    line-height: 58px;
+    font-size: 20px;
+}
+
+.article-card {
+    margin: 10px 0;
+    padding: 15px 10px;
+    background-color: #fff;
+}
+
+.article-avatar img {
+    width: 100%;
+    display: block;
+}
+
+.article-author {
+    padding: 10px;
+    background: #FEFEFE;
+    overflow: hidden;
+}
+
+.article-author-name {
+    color: #757575;
+}
+
+.article-date {
+    float: right;
+}
+
+.article-title {
+    font-size: 18px;
+    color: #2A2A2A;
+    line-height: 30px;
+    font-weight: 700;
+    padding: 10px;
+    background: #FFF;
+    margin: 10px 0 0 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.article-description {
+    color: #757575;
+    margin-top: 10px;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    max-height: 48px;
+    font-size: 14px;
+}
+
+.markdown-view {
+    background: #fcfaf2;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 0 0 5px 5px;
+    line-height: 1.6;
+}
+
+.markdown-view img,
+.editor-markdown-preview img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.markdown-view pre {
+    background: #23241f;
+}
+
+.markdown-view p {
+    display: block;
+    margin: 1em 0;
+}
+
+.btn-writer:link,
+.btn-writer:visited,
+.btn-writer:hover,
+.btn-writer:active {
+    float: right;
+    width: 100px;
+    line-height: 36px;
+    border-radius: 20px;
+    font-size: 15px;
+    color: #fff;
+    background-color: #ea6f5a;
+    margin: 11px;
+    text-align: center;
+}
+
+.btn-home:link,
+.btn-home:visited,
+.btn-home:hover,
+.btn-home:active {
+    line-height: 58px;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    font-weight: 700;
+}

@@ -1,0 +1,20 @@
+<%- layout/frontend%>
+
+<%# head:
+<title><%=locals.article.title%></title>
+<meta name="description" content=<%=JSON.stringify(locals.article.description)%>>
+#%>
+
+<h1 class="article-title"><%=locals.article.title%></h1>
+<section class="article-author">
+    <!-- <a class="article-author-name" href="/account/<%=locals.article.author_id%>"> -->
+    	<%=(locals.author && locals.author.name || '')%>
+    <!-- </a> -->
+    <span class="article-date">发布于: <%=locals.date%></span>
+</section>
+<section class="markdown-view"><%if(locals.article.thumb){%>
+	<div class="article-avatar">
+        <img src=<%=JSON.stringify(locals.article.thumb||'/img/fff.png')%>>
+	</div><%}%>
+    <%=(locals.content_html||'')%>
+</section>

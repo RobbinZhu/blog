@@ -1,0 +1,41 @@
+<%- layout/frontend%>
+
+<%# head:
+    <title><%=locals.site.title%></title>
+    <meta name="description"  content="<%=locals.site.description%>">
+    <meta name="keywords"  content="<%=locals.site.keywords%>">
+    <meta name="apple-mobile-web-app-title" content="<%=locals.site.title%>">
+#%>
+<ul>
+    <%
+for(var i = 0, j = locals.articles.rows.length; i < j; i++) {
+var article = locals.articles.rows[i];
+%>
+        <li>
+            <div class="article-card"><%if(article.thumb){%>
+                <section class="article-avatar">
+                    <a href="/article/<%=article.id%>">
+                        <img src=<%=JSON.stringify(article.thumb||'/img/fff.png')%>>
+                    </a>
+                </section><%}%>
+                <section class="article-author">
+                    <!-- <a class="article-author-name" href="/account/<%=article.author_id%>"> -->
+                        <%
+                    var author = locals.authors[article.author_id];%>
+                            <%=(author && author.name || '')%>
+                    <!-- </a> -->
+                    <span class="article-date"><%=article.date%></span>
+                </section>
+                <p class="article-title">
+                    <a href="/article/<%=article.id%>">
+                        <%=(article.title||'')%>
+                    </a>
+                </p>
+                <p class="article-description">
+                    <%=(article.description||'')%>
+                </p>
+            </div>
+        </li>
+        <%
+}%>
+</ul>
