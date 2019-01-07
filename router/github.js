@@ -105,7 +105,13 @@ router
         })
         if (!account) {
             account = await Model.account.create({
-                name: 'github_' + git_user.email,
+                name: 'github_' + git_user.email.split('').filter(function(char) {
+                    const charCode = char.charCodeAt(0)
+                    return (48 <= charCode && charCode <= 57) || //0-9
+                        (65 <= charCode && charCode <= 90) || //A-Z
+                        (97 <= charCode && charCode <= 122) || //a-z
+                        (charCode == 95) //_
+                }).join(''),
                 email: git_user.email ? (Math.random().toString().slice(2, 5) + git_user.email) : ('github_' + git_user.id + '@github.local'),
                 password: git_user.email,
                 avatar: git_user.avatar_url + '&s=150',
