@@ -70,25 +70,25 @@ async function getResources(ids) {
 async function checkPermission(ctx, sid) {
     const account = await getAccount(sid)
     if (!account) {
-        return
+        return false
     }
     const account_roles = await getAccountRoles(sid)
     if (!account_roles.length) {
-        return
+        return false
     }
 
     const roles_resources = await getRolesResources(account_roles.map(function(account_role) {
         return account_role.role_id
     }))
     if (!roles_resources.length) {
-        return
+        return false
     }
 
     const resources = await getResources(roles_resources.map(function(role_resource) {
         return role_resource.resource_id
     }))
     if (!resources.length) {
-        return
+        return false
     }
     const path = ctx.url
     const method = ctx.method
@@ -97,8 +97,8 @@ async function checkPermission(ctx, sid) {
         const resource = resources[i]
         const url = resource.url
         const method = resource.method
-        urlRegex[url] = urlRegex[url] || new RegExp('^' + url + '$')
-        methodRegex[method] = methodRegex[method] || new RegExp('^' + method + '$')
+        urlRegex[url] = urlRegex[url] || (urlRegex[url] = new RegExp('^' + url + '$'))
+        methodRegex[method] = methodRegex[method] || (methodRegex[method] = new RegExp('^' + method + '$'))
         if (urlRegex[url].test(path) && methodRegex[method].test(method)) {
             hasPermission = true
             break
